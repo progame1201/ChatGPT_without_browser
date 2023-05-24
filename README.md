@@ -1,7 +1,7 @@
 # ChatGPT_without_browser
 makes it possible to use chatgpt in the console
 
-#where can it be run?
+# where can it be run?
 wherever python is supported
 
 # how to use it?

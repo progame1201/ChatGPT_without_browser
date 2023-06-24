@@ -22,10 +22,10 @@ def main():
     openai.api_key = API
   messages = []
   if chooseAPI == "2":
-    API = "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"
+    API = ""
     openai.api_key = API
   if chooseAPI == "3":
-    API = "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"
+    API = ""
     openai.api_key = API
   out.append("")
 

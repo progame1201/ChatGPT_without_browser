@@ -1,18 +1,19 @@
 import os
+
 os.system("title ChatGPT without browser")
 from time import sleep
 import openai
 import datetime
 import random
+
 def center(str, weight):
     print(" "*weight + str)
 
-str = "ChatGPT without browser 1.1.2, progame1201"
+str = "ChatGPT without browser 2.0, progame1201"
 
 weight = 40
-
 center(str, weight)
-str = "using the gpt-3.5-turbo model from OpenAI https://openai.com/"
+str = "using the gpt-3.5-turbo-0613 model from OpenAI https://openai.com/"
 weight = 29
 center(str, weight)
 print("------------------------------------------------------------------------------------------------------------------------")
@@ -25,9 +26,7 @@ print("1 - use your API key")
 
 print("2 - use the standard API key")
 
-print("3 - use the first spare key")
-
-print("4 - use a second spare key")
+print("3 - use a second spare key (another user)")
 
 chooseAPI = input("")
 
@@ -37,16 +36,11 @@ if chooseAPI == "1":
 messages = []
 
 if chooseAPI == "2":
-    API = "redacted"
+    API = "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"
     openai.api_key = API
 
 if chooseAPI == "3":
- API = "redacted"
- openai.api_key = API
-
-
-if chooseAPI == "4":
-    API = "redacted"
+    API = "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"
     openai.api_key = API
 print()
 print("Logs")
@@ -73,7 +67,7 @@ while True:
 
     messages.append({"role": "user", "content": msg1})
     completion = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="gpt-3.5-turbo-0613",
         messages=messages
     )
     chat_response = completion.choices[0].message.content
